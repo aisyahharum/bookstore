@@ -5,7 +5,7 @@
         <!-- header bagian kiri -->
         <v-app-bar-nav-icon v-if="isHome" @click="setSideBar(!sideBar)"></v-app-bar-nav-icon>
         <v-btn v-if="!isHome" icon @click="$router.go(-1)">
-        <v-icon>arrow_back</v-icon>
+            <v-icon>arrow_back</v-icon>
         </v-btn>
 
         <!-- header bagian tengah -->
@@ -15,9 +15,9 @@
         <v-spacer></v-spacer>
 
         <!-- header bagian kanan  -->
-        <v-btn icon>
+        <v-btn icon @click="cart()">
             <v-badge left overlap color="orange">
-                <span slot="badge" v-if="countCart>0">{{countCart}}</span>
+                <span slot="badge" v-if="countCart>0">{{ countCart }}</span>
                 <span slot="badge" v-else>0</span>
                 <v-icon>shopping_cart</v-icon>
             </v-badge>
@@ -35,15 +35,27 @@
     methods:{
         ...mapActions({
             setSideBar: 'setSideBar',
+            setStatusDialog: 'dialog/setStatus',
+            setComponent: 'dialog/setComponent'
         }),
+        search() {
+            this.setStatusDialog(true)
+            this.setComponent('search')
+            this.setSideBar(false)
+        },
+        cart() {
+            this.setStatusDialog(true)
+            this.setComponent('cart')
+            this.setSideBar(false)
+        }
     },
     computed: {
         ...mapGetters({
             sideBar: 'sideBar',
+            countCart: 'cart/count'
         }),
         isHome(){
             return (this.$route.path === '/')
-            // return "Hello"
         }
     }
   }
