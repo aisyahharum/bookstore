@@ -1,7 +1,7 @@
 <template>
-    <v-footer dark height="auto" color="primary">
+    <v-footer dark height="auto" color="dark">
     <v-flex xs12>
-        <v-card text tile class="white--text text-xs-center" color="primary">
+        <v-card text tile class="white--text text-xs-center" color="dark">
             <!-- menu icon media sosial -->
             <v-card-text>
                 <v-btn v-for="icon in icons" :key="icon" class="mx-3 white--text" icon>

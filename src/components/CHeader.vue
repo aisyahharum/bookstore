@@ -1,6 +1,6 @@
 <template>
     <!-- toolbar vuetify dengan warna primary  -->
-    <v-app-bar dark color="primary">
+    <v-app-bar dark color="dark">
 
         <!-- header bagian kiri -->
         <v-app-bar-nav-icon v-if="isHome" @click="setSideBar(!sideBar)"></v-app-bar-nav-icon>
@@ -8,8 +8,12 @@
             <v-icon>arrow_back</v-icon>
         </v-btn>
 
+        <v-spacer></v-spacer>
+
         <!-- header bagian tengah -->
-        <v-toolbar-title class="white--text">Bookstore</v-toolbar-title>
+        <v-toolbar-title class="white--text">
+            <v-img src="img/lawless.png" width="60"></v-img>
+        </v-toolbar-title>
 
         <!-- sperator agar header bagian kanan posisi rata kanan  -->
         <v-spacer></v-spacer>
