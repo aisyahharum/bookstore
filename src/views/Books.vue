@@ -2,7 +2,7 @@
     <div>
         <v-container grid-list-md>
             <v-subheader>
-                All Books
+                All Menus
             </v-subheader>
             <v-layout row wrap>
                 <v-flex v-for="(book, index) in books" xs6 :key="index">
