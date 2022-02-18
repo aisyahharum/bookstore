@@ -1,6 +1,6 @@
 <template>
     <v-card>
-        <v-toolbar dark color="dark">
+        <v-toolbar dark color="primary">
             <v-btn icon dark @click="close">
                 <v-icon>close</v-icon>
             </v-btn>

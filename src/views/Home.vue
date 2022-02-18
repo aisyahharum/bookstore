@@ -45,7 +45,7 @@
     <!-- bagian kedua : book  -->
     <v-container grid-list-md>
       <v-subheader>
-        Top Menus
+        Top Books
           <v-spacer></v-spacer>
           <!-- link ke route books -->
           <router-link to="/books">See All</router-link>

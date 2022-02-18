@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer v-model="drawer" absolute fixed clipped>
         <!-- header toolbar pada sidebar -->
-        <v-toolbar dark color="dark">
+        <v-toolbar dark color="primary">
             <v-btn icon dark @click="drawer=false">
                 <v-icon>close</v-icon>
             </v-btn>
